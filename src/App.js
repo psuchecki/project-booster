@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <Panel header="Crowdsale Title">
+          <Panel header="Money grower">
             <Grid>
               <Row>
                 <Col xs={12} md={8}>
