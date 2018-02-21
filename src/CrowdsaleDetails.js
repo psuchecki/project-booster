@@ -75,7 +75,7 @@ class CrowdsaleDetails extends Component {
     const diff = endTime.getTime() - new Date().getTime();
     const endCrowdsaleTimeout = Math.max(diff, 0);
 
-    setTimeout(this.endCrowdSale, endCrowdsaleTimeout);
+    setTimeout(this.endCrowdSale, endCrowdsaleTimeout + 1000);
   }
 
   async endCrowdSale() {
