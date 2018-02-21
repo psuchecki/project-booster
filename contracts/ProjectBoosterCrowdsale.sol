@@ -13,15 +13,14 @@ contract ProjectBoosterCrowdsale is CappedCrowdsale, RefundableCrowdsale {
 	RefundableCrowdsale(goal)
 	Crowdsale(startTime, endTime, rate, wallet) {
 		require(goal <= cap);
-		donations = 0;
-	}
-
-	function buyTokens2(address beneficiary) public payable {
-		super.buyTokens(beneficiary);
 	}
 
 	function createTokenContract() internal returns (MintableToken) {
 		return new ProjectBoosterToken();
+	}
+
+	function hasEnded() public view returns (bool) {
+		return super.goalReached() || now > endTime;
 	}
 
 }

@@ -11,21 +11,20 @@ import {Row} from 'react-bootstrap'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
-import Boxer from './img/boxer.jpeg'
+import Growth from './img/growth-700x467.jpg'
 
 class App extends Component {
 
   render() {
     return (
       <div className="App">
-        <main className="container">
           <Panel header="Crowdsale Title">
             <Grid>
               <Row>
-                <Col xs={14} md={7}>
-                  <CampaignImage src={Boxer}/>
+                <Col xs={12} md={8}>
+                  <CampaignImage src={Growth}/>
                 </Col>
-                <Col xs={10} md={5}>
+                <Col xs={10} md={4}>
                   <CrowdsaleDetails/>
                 </Col>
               </Row>
@@ -34,7 +33,6 @@ class App extends Component {
               </Row>
             </Grid>
           </Panel>
-        </main>
       </div>
     );
   }

@@ -10,19 +10,13 @@ const duration = {
 };
 
 module.exports = function(deployer, network, accounts) {
-  const startTime = web3.eth.getBlock(web3.eth.blockNumber).timestamp + duration.seconds(60);
-  const endTime = startTime + duration.weeks(1);
-  const wallet = accounts[0];
+  const startTime = web3.eth.getBlock(web3.eth.blockNumber).timestamp + duration.seconds(1);
+  const endTime = startTime + duration.minutes(1);
+  const wallet = accounts[1];
 
   const rate = new web3.BigNumber(100);
-  const goal = new web3.BigNumber(20000000000000000000);
-  const cap = new web3.BigNumber(200000000000000000000);
-  // console.log("start = " + startTime);
-  // console.log("end = " + endTime);
-  // console.log("rate = " + rate);
-  // console.log("goal = " + goal);
-  // console.log("cap = " + cap);
-  // console.log("wallet = " + wallet);
+  const goal = new web3.BigNumber(5000000000000000000);
+  const cap = new web3.BigNumber(20000000000000000000);
 
   deployer.deploy(Crowdsale, startTime, endTime, rate, goal, cap, wallet);
 };
