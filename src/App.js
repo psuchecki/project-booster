@@ -21,10 +21,10 @@ class App extends Component {
           <Panel header="Money grower">
             <Grid>
               <Row>
-                <Col xs={12} md={8}>
+                <Col xs={16} md={8}>
                   <CampaignImage src={Growth}/>
                 </Col>
-                <Col xs={10} md={4}>
+                <Col xs={8} md={4}>
                   <CrowdsaleDetails/>
                 </Col>
               </Row>
