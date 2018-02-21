@@ -19,6 +19,7 @@ truffle migrate
 ```
 
 ## Usage
+To start node server
 ```
 npm run start
 ```
